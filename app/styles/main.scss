@@ -1,0 +1,320 @@
+
+$container_with: 980px;
+$padding_size: 50px;
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    font: inherit;
+    font-size: 100%;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    padding: 0.2em 0;
+    background: #ccc;
+    color: #000;
+}
+/* Everything but the jumbotron gets side spacing for mobile first views */
+.header,
+.marketing,
+.footer {
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+/* Custom page header */
+.header {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/* Make the masthead heading the same height as the navigation */
+.header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-bottom: 19px;
+    line-height: 40px;
+}
+
+/* Custom page footer */
+.footer {
+    padding-top: 19px;
+    border-top: 1px solid #e5e5e5;
+    color: #777;
+}
+
+.container-narrow > hr {
+    margin: 30px 0;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+    border-bottom: 1px solid #e5e5e5;
+    text-align: center;
+}
+
+.jumbotron .btn {
+    padding: 14px 24px;
+    font-size: 21px;
+}
+
+h2{
+    font-size: 1.5em;
+}
+h1{
+    font-weight: 900;
+    font-size: 3em;
+}
+h4{
+    font-size: 1.5em;
+}
+h5{
+    font-size: 1.3em;   
+}
+h1,h2,h3,h4,h5,h6{
+    padding-left: $padding_size;
+    text-transform: uppercase;
+}
+
+.italic{
+    font-weight: 300;
+    font-style: italic;
+}
+
+strong{
+    font-weight: 700;
+}
+
+/* Supporting marketing content */
+.marketing {
+    margin: 40px 0;
+}
+
+.marketing p + h4 {
+    margin-top: 28px;
+}
+
+html,body{
+    width:100%;
+    height:100%;
+    color: white;
+    letter-spacing: 1px;
+    font-size: 17px;
+    font-family: Lato;
+    line-height: 1.4em;
+}
+.full-screen{
+  overflow:hidden; /* or overflow:auto; if you want scrollbars */
+  width:100%;
+  height:100%;
+}
+.chooses{
+    background-image: url(/images/chaussures.jpg);
+}
+.cover-picture {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+$menu_height: 50px;
+.intro{
+    position: relative;
+    .center{
+        margin: 0 auto;
+        width: 600px;
+        text-align: center;
+        line-height: 2em;
+        &.vertical{
+            position: relative;
+            top: 40%;
+        }
+    }
+    .menu{
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: $menu_height;
+        background-color: black;
+        a{
+            display: inline-block;
+            padding: 17px 30px;
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            transition: background-color .2s ease;
+            &:hover{
+                background-color: #141414;
+            }
+        }
+    }
+}
+
+.span3{
+    width: $container_with/12*3 - $padding_size;
+}
+.span4{
+    width: $container_with/12*4 - $padding_size - 3;
+}
+.span8{
+    width: $container_with/12*8 - $padding_size;
+}
+
+[class*="span"]{
+    display: inline-block;
+    padding-left: $padding_size;
+}
+
+.justify{
+    text-align: justify;
+}
+.vignette{
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-left: -4px;
+    padding: 0;
+    background-color: black;
+    img{
+        transition: opacity .5s ease;
+    }
+    .desc{
+        position: absolute;
+        top: 33%;
+        right: -100%;
+        opacity: 0;
+        transition: all .5s ease;
+    }
+    &:hover{
+        .desc{
+            right: 33%;
+            opacity: 1;
+        }
+        img{
+            opacity: .5;
+        }
+    }
+}
+
+.casting{
+    padding-top: 25px;
+    padding-bottom: 250px;
+    color: black;
+    text-align: center;
+    img{
+        border-radius: 50%;
+    }
+    h2{
+        margin-bottom: 50px;
+    }
+    .span4{
+        vertical-align: top;
+    }
+}
+
+.synopsis{
+    padding-top: 25px;
+    background-color: black;
+    h2{
+        margin-bottom: 50px;
+    }
+}
+
+.credits{
+    .container{
+        height: 196px;
+        overflow: hidden;
+    }
+}
+
+.footer.center{
+    background-color: black;
+    padding-bottom: 15px;
+    text-align: center;
+    a{
+        color: white;
+        text-decoration: none;
+    }
+}
+
+.pull-left{
+    float: left;
+}
+
+.pull-right{
+    float: right;
+}
+
+.container{
+    margin: 0 auto;
+    width: $container_with;
+}
+
+h2.center{
+    vertical-align: middle;
+    text-align: center;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.name{
+    margin-bottom: 15px;
+}
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-right: 0;
+        padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
